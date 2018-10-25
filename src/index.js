@@ -19,4 +19,50 @@ $(document).ready(function(){
             .closest('div.content').find('main.content__body div.content__body-item')
             .removeClass('active').eq($(this).index()).addClass('active');
     });
+
+
+    //----------create table
+    document.querySelector('.content__body-btn').onclick = function(){
+
+        let container = document.getElementsByClassName('content__body-container')[0];
+        let row = document.getElementsByClassName('content__body-input')[0].value;
+        let column = document.getElementsByClassName('content__body-input')[1].value;
+        let i = 0;
+        let cloneTr;
+        let cloneTd;
+        console.log(row, column);
+        //create table
+        let table = document.createElement('table');
+        table.className = 'content__body-table';
+        table.style.borderSpacing = `1px`;
+        table.style.border = `1px solid grey`;
+        container.appendChild(table);
+
+        //create row
+        let tr = document.createElement('tr');
+        tr.className = 'content__body-tr';
+         //table.appendChild(tr);
+
+
+        //crete column
+        let td = document.createElement('td');
+        td.className = 'content__body-td';
+        td.style.width = `70px`;
+        td.style.height = `30px`;
+        //tr.appendChild(td);
+
+        cloneTr = tr.cloneNode(true);
+        cloneTd = td.cloneNode(true);
+
+        table.appendChild(cloneTr);
+        cloneTr.appendChild(cloneTd);
+
+
+
+};
+
+
+
+
 });
+

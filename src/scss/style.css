@@ -130,14 +130,32 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 0 40px;
+    padding-left: 40px;
     background-color: #fff; }
   .content__body-item {
     display: none; }
   .content__body-item.active {
     display: flex;
+    flex-direction: column; }
+  .content__body-input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px; }
+  .content__body-btn {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px; }
+  .content__body-container {
     width: 100%;
     height: 100%; }
+  .content__body-table {
+    border-spacing: 1px;
+    border: 1px solid black; }
+  .content__body-td {
+    border: 1px solid black;
+    width: 70px;
+    height: 30px;
+    text-align: center; }
 
 .open {
   display: flex;
