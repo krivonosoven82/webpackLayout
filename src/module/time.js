@@ -34,6 +34,7 @@ export default function showTime(){
     setInterval(function(){
         setTime();
     }, 1000)
+    setTime();
 
 }
 
