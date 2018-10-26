@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import showTime from './module/time';
 import './scss/style.scss';
 
 $(document).ready(function(){
@@ -19,8 +20,12 @@ $(document).ready(function(){
             .closest('div.content').find('main.content__body div.content__body-item')
             .removeClass('active').eq($(this).index()).addClass('active');
     });
+//======================================================================================================================
+    //ShowTime
+    showTime();
 
 
+//======================================================================================================================
     //----------create table
     document.querySelector('.content__body-btn').onclick = function(){
 
@@ -54,14 +59,11 @@ $(document).ready(function(){
         cloneTr = tr.cloneNode(true);
         cloneTd = td.cloneNode(true);
 
-        table.appendChild(cloneTr);
-        cloneTr.appendChild(cloneTd);
-
-
-
+        // table.appendChild(cloneTr);
+        // cloneTr.appendChild(cloneTd);
 };
 
-
+//======================================================================================================================
 
 
 });

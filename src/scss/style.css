@@ -57,6 +57,14 @@ body {
     .header__nav {
       font-size: 24px; } }
 
+  .header__oclock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    color: #fff; }
+
 .content {
   display: flex;
   width: 100%;
