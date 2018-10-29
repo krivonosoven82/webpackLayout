@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import showTime from './module/time';
+import showTable from './module/table';
 import './scss/style.scss';
 
 $(document).ready(function(){
@@ -23,6 +24,9 @@ $(document).ready(function(){
 //======================================================================================================================
     //ShowTime
     showTime();
+
+    //showTable;
+    showTable();
 
 
 //======================================================================================================================
