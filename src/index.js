@@ -2,6 +2,7 @@ import $ from 'jquery';
 import setTime from './modules/time';
 import showTable from './modules/table';
 import nextSlide from './modules/slider';
+import images from './modules/slider'
 import './scss/style.scss';
 
 window.onload = function() {

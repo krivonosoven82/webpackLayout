@@ -1,7 +1,7 @@
 // to get access for the .div
 const div = document.getElementsByClassName('content__body-item')[1];
 let currentSlide = 0;
-let images = [
+ let images = [
     './src/img/slider/cat.jpg',
     './src/img/slider/edinorog.jpg',
     './src/img/slider/hacker.jpg',
