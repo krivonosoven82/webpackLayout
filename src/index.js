@@ -1,9 +1,10 @@
 import $ from 'jquery';
-import showTime from './module/time';
-import showTable from './module/table';
+import setTime from './modules/time';
+import showTable from './modules/table';
+import nextSlide from './modules/slider';
 import './scss/style.scss';
 
-$(document).ready(function(){
+window.onload = function() {
     //----------Боковое меню
     $('.open').on('click', function(){
         $('.content__nav').addClass('openNav').removeClass('closeNav');
@@ -23,52 +24,11 @@ $(document).ready(function(){
     });
 //======================================================================================================================
     //ShowTime
-    showTime();
+    setTime();
 
     //showTable;
     showTable();
 
-
-//======================================================================================================================
-    //----------create table
-    document.querySelector('.content__body-btn').onclick = function(){
-
-        let container = document.getElementsByClassName('content__body-container')[0];
-        let row = document.getElementsByClassName('content__body-input')[0].value;
-        let column = document.getElementsByClassName('content__body-input')[1].value;
-        let i = 0;
-        let cloneTr;
-        let cloneTd;
-        console.log(row, column);
-        //create table
-        let table = document.createElement('table');
-        table.className = 'content__body-table';
-        table.style.borderSpacing = `1px`;
-        table.style.border = `1px solid grey`;
-        container.appendChild(table);
-
-        //create row
-        let tr = document.createElement('tr');
-        tr.className = 'content__body-tr';
-         //table.appendChild(tr);
-
-
-        //crete column
-        let td = document.createElement('td');
-        td.className = 'content__body-td';
-        td.style.width = `70px`;
-        td.style.height = `30px`;
-        //tr.appendChild(td);
-
-        cloneTr = tr.cloneNode(true);
-        cloneTd = td.cloneNode(true);
-
-        // table.appendChild(cloneTr);
-        // cloneTr.appendChild(cloneTd);
+    //slider
+    nextSlide();
 };
-
-//======================================================================================================================
-
-
-});
-

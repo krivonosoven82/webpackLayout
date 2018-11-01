@@ -28,15 +28,9 @@ function setTime(){
     spanHours.innerHTML = `${time(hours)}`;
     spanMinutes.innerHTML = `:${time(minutes)}`;
     spanSeconds.innerHTML = `:${time(seconds)}`;
+
+    setTimeout(setTime, 1000);
 }
 
-export default function showTime(){
-    setInterval(function(){
-        setTime();
-    }, 1000)
-    setTime();
-
-}
-
-
+export default setTime;
 
