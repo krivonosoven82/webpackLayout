@@ -1,6 +1,6 @@
 .footer{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
@@ -9,7 +9,20 @@
   @media(max-width: 420px){
     padding: 0 16px;
   }
-  &__title{
+  &__resize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 30px;
+    color: $white;
+  }
+  &__date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 30px;
     color: $white;
   }
 }

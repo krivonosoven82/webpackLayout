@@ -1,35 +1,55 @@
-// to get access for the .div
-const div = document.getElementsByClassName('content__body-item')[1];
-let currentSlide = 0;
- let images = [
+let position = 0;
+
+//----------arrayImg
+let arrayImg = [
     './src/img/slider/cat.jpg',
     './src/img/slider/edinorog.jpg',
     './src/img/slider/hacker.jpg',
     './src/img/slider/js.jpg',
-    './src/img/slider/spongebob.jpg'];
+    './src/img/slider/spongebob.jpg',
+];
 
-//to create the element wrapper for the slider
-const sliderWrapper = document.createElement('div');
-sliderWrapper.className = 'slider';
-div.appendChild(sliderWrapper);
+//----------main container
+let contentItem = document.getElementsByClassName('content__body-item')[1];
+contentItem.className = 'content__body-item item-slider';
 
-for(let i = 0; i < images.length; i++){
-    let wrapImg = document.createElement('div');
-    wrapImg.className = 'slider-wrapImg';
-    sliderWrapper.appendChild(wrapImg);
+//----------div slider
+const slider = document.createElement('div');
+slider.className = 'slider';
+contentItem.appendChild(slider);
+
+//----------div slider__wrap
+let sliderWrap = document.createElement('div');
+sliderWrap.className = 'slider__wrap';
+slider.appendChild(sliderWrap);
+
+//----------img .slider__img
+for(let i = 0; i < arrayImg.length; i++){
     let img = document.createElement('img');
-    img.className = 'slider-img';
-    img.setAttribute('src', images[i]);
-    img.setAttribute('alt', `image${i}`);
-    wrapImg.appendChild(img);
-
+    img.setAttribute('src', arrayImg[i]);
+    img.setAttribute('alt', 'img');
+    img.className = 'slider__img';
+    sliderWrap.appendChild(img);
 }
-let arrSlider = document.querySelectorAll('.slider-wrapImg');
 
-function nextSlide() {
-    arrSlider[currentSlide].className = 'slider-wrapImg';
-    currentSlide = (currentSlide + 1) % arrSlider.length;
-    arrSlider[currentSlide].className = 'slider-wrapImg active';
-    setTimeout(nextSlide, 2000);
+let indexImgSlider = document.querySelectorAll('.slider__img');
+
+
+console.dir(sliderWrap);
+console.log(sliderWrap);
+
+
+let stepPosition = (sliderWrap.offsetWidth / indexImgSlider.length);
+let sliderWrapWidth = position - (sliderWrap.offsetWidth - stepPosition);
+
+
+
+function nextSlide(){
+    if(position < sliderWrapWidth){
+        position = 0;
+    }
+    sliderWrap.style.left = position + 'px';
+    position = position - stepPosition;
+    setTimeout(nextSlide, 3000);
 }
-export default nextSlide;
+nextSlide();

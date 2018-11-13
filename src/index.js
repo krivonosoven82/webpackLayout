@@ -1,8 +1,10 @@
 import $ from 'jquery';
 import setTime from './modules/time';
 import showTable from './modules/table';
-import nextSlide from './modules/slider';
-import images from './modules/slider'
+//import showSlide from './modules/slider';
+import './modules/slider';
+import showResize from './modules/resize';
+import showFullDate from './modules/date';
 import './scss/style.scss';
 
 window.onload = function() {
@@ -30,6 +32,12 @@ window.onload = function() {
     //showTable;
     showTable();
 
-    //slider
-    nextSlide();
+    // //slider
+    // showSlide();
+
+    //resize
+    showResize();
+
+    //date
+    showFullDate();
 };
