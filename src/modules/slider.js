@@ -34,7 +34,7 @@
 
     //let indexImgSlider = document.querySelectorAll('.slider__img');
     // let stepPosition = (sliderWrap.offsetWidth / indexImgSlider.length);      // 600 - ? ...не отображается
-    // let sliderWrapWidth = position - (sliderWrap.offsetWidth - stepPosition); // 3000 - ?  ...не отображается
+    // let sliderWrapWidth = position - (sliderWrap.offsetWidth - stepPosition); // 2400 - ?  ...не отображается
 
     function showNextSlide(){
         if(position < -2400){
