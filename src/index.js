@@ -2,7 +2,7 @@ import $ from 'jquery';
 import setTime from './modules/time';
 import showTable from './modules/table';
 //import showSlide from './modules/slider';
-import './modules/slider';
+import showNextSlide from './modules/slider';
 import showResize from './modules/resize';
 import showFullDate from './modules/date';
 import './scss/style.scss';
@@ -32,8 +32,8 @@ window.onload = function() {
     //showTable;
     showTable();
 
-    // //slider
-    // showSlide();
+    //slider
+    showNextSlide();
 
     //resize
     showResize();
